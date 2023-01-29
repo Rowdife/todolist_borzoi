@@ -25,3 +25,13 @@
     transform: none;
   }
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border: 1px solid white;
+}
+button:hover {
+  cursor: pointer;
+}
