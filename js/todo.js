@@ -28,7 +28,7 @@ function deleteToDo(event) {
 }
 
 function paintToDo(newTodo) {
-  if (toDos.length < 5) {
+  if (toDos.length < 15) {
     const li = document.createElement("li");
     li.id = newTodo.id;
     const span = document.createElement("span");
@@ -42,7 +42,7 @@ function paintToDo(newTodo) {
     li.appendChild(span);
     toDoList.appendChild(li);
   } else {
-    alert(`mOrE ThAn 4 tO-dOs?!?!?! let me do it for you....`);
+    alert(`mOrE ThAn 15 tO-dOs?!?!?! let me do it for you....`);
     toDos.pop();
   }
 }
@@ -63,12 +63,14 @@ function handleToDoSubmit(event) {
 }
 
 function handleAnimation() {
-  borzoi.classList.add("letme-animation");
   letme.volume = 0.5;
   letme.play();
-  setTimeout(function () {
-    borzoi.classList.remove("letme-animation");
-  }, 3000);
+  if (toDos.length < 15) {
+    borzoi.classList.add("letme-animation");
+    setTimeout(function () {
+      borzoi.classList.remove("letme-animation");
+    }, 3000);
+  }
 }
 
 toDoForm.addEventListener("submit", handleAnimation);

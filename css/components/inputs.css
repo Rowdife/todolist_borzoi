@@ -9,6 +9,7 @@ input:focus::-webkit-input-placeholder {
   color: white;
   font-size: 20px;
   text-align: center;
+  margin-bottom: 30px;
 }
 .general_input::placeholder {
   text-align: center;

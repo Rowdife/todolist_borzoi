@@ -3,6 +3,7 @@
   z-index: 99;
   height: 250px;
   width: 200px;
+  margin-bottom: 30px;
 }
 .letme-animation {
   animation: letme 3s ease-in-out;
