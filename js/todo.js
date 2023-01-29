@@ -48,6 +48,12 @@ function paintToDo(newTodo) {
 }
 
 function handleToDoSubmit(event) {
+  if (toDos.length < 14) {
+    handleAnimation();
+  } else {
+    letme.volume = 0.5;
+    letme.play();
+  }
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
@@ -55,25 +61,21 @@ function handleToDoSubmit(event) {
     text: newTodo,
     id: Date.now(),
   };
-  setTimeout(function () {
-    toDos.push(newTodoObj);
-    paintToDo(newTodoObj);
-    saveToDos();
-  }, 1500);
+  toDos.push(newTodoObj);
+  paintToDo(newTodoObj);
+  saveToDos();
 }
 
 function handleAnimation() {
   letme.volume = 0.5;
   letme.play();
-  if (toDos.length < 15) {
-    borzoi.classList.add("letme-animation");
-    setTimeout(function () {
-      borzoi.classList.remove("letme-animation");
-    }, 3000);
-  }
+  borzoi.classList.add("letme-animation");
+  setTimeout(function () {
+    borzoi.classList.remove("letme-animation");
+  }, 3000);
 }
 
-toDoForm.addEventListener("submit", handleAnimation);
+// toDoForm.addEventListener("submit", handleAnimation);
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);

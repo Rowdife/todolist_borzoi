@@ -19,6 +19,7 @@ body {
   height: 100%;
   overflow: hidden;
   color: white;
+  font-family: "Signika Negative", sans-serif;
 }
 #quote {
   display: flex;
