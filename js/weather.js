@@ -8,12 +8,14 @@ function onGeoOk(position) {
     response.json().then((data) => {
       const weather = document.querySelector("#weather span:first-child");
       const city = document.querySelector("#weather span:last-child");
-      city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main},${data.main.temp}c°`;
+      city.innerText = `@${data.name}`;
+      weather.innerText = ` ${Math.round(data.main.temp)}c°,  ${
+        data.weather[0].main
+      }  `;
     })
   );
 }
 function onGeoError() {
-  alert("Can't find you.");
+  console.log("Can't find your location");
 }
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

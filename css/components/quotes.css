@@ -1,0 +1,10 @@
+#quote {
+  text-align: center;
+  margin-bottom: 10px;
+}
+#quote span:first-child {
+  font-size: 13px;
+}
+#quote span:last-child {
+  font-size: 5px;
+}

@@ -1,0 +1,8 @@
+.todo-list__box {
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+}
+#todo-list {
+  padding: 0px 0px;
+}

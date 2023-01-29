@@ -1,0 +1,26 @@
+.borzoi-icon img {
+  position: sticky;
+  z-index: 99;
+  height: 250px;
+  width: 200px;
+}
+.letme-animation {
+  animation: letme 3s ease-in-out;
+}
+@keyframes letme {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: rotate(45deg) scale(1.5) translateY(100px);
+  }
+  50% {
+    transform: rotate(-25deg) scale(5) translateY(50px);
+  }
+  75% {
+    transform: rotate(0deg) scale(1.5) translateY(0px);
+  }
+  100% {
+    transform: none;
+  }
+}

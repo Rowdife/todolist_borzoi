@@ -1,0 +1,32 @@
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.general_input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.general_input::placeholder {
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}
+.input_for_name {
+  height: 30px;
+  width: 200px;
+}
+.input_for_name::placeholder {
+  font-size: 20px;
+}
+.input_for_todo {
+  width: 175px;
+}
+.input_for_todo::placeholder {
+  font-size: 12px;
+  position: relative;
+  z-index: -1;
+}

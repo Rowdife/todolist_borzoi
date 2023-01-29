@@ -1,11 +1,24 @@
 /* reset */
 @import "reset.css";
-.hidden {
+/* components */
+@import "components/inputs.css";
+@import "components/clock.css";
+@import "components/greeting.css";
+@import "components/quotes.css";
+@import "components/weather.css";
+@import "components/borzoi-todo.css";
+@import "components/todo-list.css";
+/*  */
+.hidden_visbility {
+  visibility: hidden;
+}
+.hidden_display {
   display: none;
 }
 body {
   height: 100%;
   overflow: hidden;
+  color: white;
 }
 #quote {
   display: flex;
@@ -17,13 +30,21 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#mainscreen {
+  height: 90vh;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+}
 .mainfunctions {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 1;
 }
-
 .background-image-container {
   display: flex;
   align-items: center;
